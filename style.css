@@ -1,0 +1,235 @@
+:root{
+    box-sizing: border-box;/*убираем margin*/
+}
+
+*,
+::before,
+::after{
+    box-sizing:inherit;
+}
+
+body{
+    width: 100%;
+    margin: 0;
+    background-color: #E19DE4;
+    font-family: 'Pacifico', cursive;/*шрифт*/
+    font-size: 24px;/*высота шрифта*/
+    font-weight: 300;/*жирность шрифта*/
+}
+
+.inner__column{
+    max-width: 1100px;
+    margin:0 auto;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    background-color: #8500be;
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top:-5px;
+}
+
+
+.logo__image{
+    display:block;
+    background-image: url(image/M0IJjlRyjDw.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-width: 320px;
+}
+
+.navigation__menu{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+a{
+    text-decoration: none;
+    position: relative;
+    padding: 1em;
+    color: #F5F206;
+    transition: 0.7s;
+    border-bottom: solid #8500be 0.2em;
+}
+
+a::after{
+    visibility: hidden;
+    display: block;
+    position: absolute;
+    content: " ";
+    left: 0;
+    background-color: rgb(251, 255, 0);
+    width: 0;
+    height: 0.3em;
+    bottom: -5px;
+    transition: 0.7s;
+}
+
+.burger__menu{
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    top: 1em;
+    right: 1em;
+}
+.burger__menu span{
+    display: block;
+    width: 1em;
+    height: 0.15em;
+    background-color: #fff;
+    margin: 0.2em;
+}
+/*блок основной*/
+#about__Us{
+    background: linear-gradient(45deg ,#c446ca, #8500be);
+    padding:5em 0;
+    color: rgb(218, 247, 114);
+    text-align: center;
+    font-size: 0.9em;
+}
+
+p .about__text{
+    padding: 1.5em;
+    line-height: 5px;
+}
+.about__test{
+    color: black;
+    font-size: 15px;
+}
+input.submit{
+
+    background-color: rgb(188, 24, 253);
+    border-radius: 5px;
+    width: 100%;
+    font-size: 32px;
+    padding: 10px;
+}
+#feedbac{
+    width: 100%;
+    height: 1em;
+}
+#visage{
+    padding-top: 1.5em;
+}
+.conteiner__image{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.conteiner__image img{
+    width: 20%;
+    margin: 0.5em;
+    box-shadow: rgb(161, 0, 100) 0 0 2em;
+    padding: 1em;
+}
+
+#pedicure{
+    padding-top:4em ;
+}
+
+#price{
+    padding-top:4em ;
+    background-color: #FFD9F4;
+    color:blueviolet;
+    text-align: center;
+}
+
+#contacts{
+    padding-top:4em ;
+    background-color: grey;
+}
+
+.jsGreeting{
+    font-size:54px ;
+    color: maroon;
+    text-align: center;
+}
+
+.container__contacts{
+    display: flex;
+}
+
+.address{
+    padding: 1em;
+    flex-basis: 45%;
+}
+.map{
+    width: 100%;
+}
+.address p{
+    color: rgb(3, 3, 3);
+    font-size: 25px;
+}
+.contacts--form__form{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+form h4{
+    font-size: 32px;
+    text-align: center;
+    color: rgb(255, 38, 0);
+}
+input{
+    padding: 1em 2em;
+    width: 50em;
+    margin-bottom: 2em;
+}
+
+
+a:hover::after{
+    visibility: visible;
+    width: 100%;
+}
+
+
+a:active{
+    background-color: rgb(7, 3, 241);
+    transition: 1s;
+}
+
+@media (max-width:481px){
+    .navigation__menu{
+        display: none;
+        font-size: 1em;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        width: 80vw;
+        margin-top: .5em;
+    }
+    .navigation__menu a{
+        padding: .3em;
+
+    }
+    header{
+        height: 5.3em;
+    }
+    .logo__image{
+        margin: 0 auto;
+    }
+    .burger__menu{
+        display: table;
+    }
+    .conteiner__image img{
+        width: 70%;
+    }
+    .container__contacts{
+        display: block;
+    }
+    .contacts--form__form{
+        width: 70%;
+    }
+    input{
+        width: 100%;
+        font-size: 15px;
+    }
+    .map{
+        display: none;
+    }
+
+}
